@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="JokeFinder is an experiment to learn more about working with online API's in JavaScript.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href = "IMG/icon32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href = "IMG/icon16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;300;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="CSS/normalize.css">
+    <link rel="stylesheet" type="text/css" href="CSS/queries.css">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <title>JokeFinder</title>
+</head>
+<body>
+    <header id="top">
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#top"><img class="logo" src="IMG/icon.png" alt="JokeFinder Logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-list navbar-toggler-icon"></i>
+                </button>
+                <h1 class="nav-heading">JokeFinder.com</h1>
+                <div class="collapse navbar-collapse main-nav pe-0" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="index.html">Home</a></li>
+                                <li><a class="dropdown-item" href="#about">About</a></li>
+                                <li><a class="dropdown-item" href="#contact">Contact</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="main-text">
+            <h1>JokeFinder</h1>
+            <h3>An experiment using JokeAPI</h3>
+            <a class="btn btn-light rounded-pill mt-4 me-5" href="#randomizer">Randomizer</a>
+            <a class="btn btn-outline-light rounded-pill mt-4" href="#finder">Finder</a>
+        </div>
+    </header>
+
+    <section id="randomizer">
+        <div class="container">
+            <div class="section_title">
+                <h2>Randomizer</h2>
+            </div>
+            <div id="jokeOutput">
+                <p id="joke">one Liner</p>
+                <p id="setup">Two_part: setup</p>
+                <p id="delivery">Two_par: delivery</p>
+            </div>
+            <a class="btn btn-light rounded-pill"id="random">Random joke</a>
+        </div>
+    </section>
+    <section id="finder">
+        <div class="container">
+            <h2>Finder</h2>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <h2>About</h2>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+        </div>
+    </section>
+
+    <script src="JS/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

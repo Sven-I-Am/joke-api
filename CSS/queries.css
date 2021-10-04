@@ -1,0 +1,24 @@
+/*----------------------*/
+/*Big tablets to 1400px*/
+/*---------------------*/
+@media only screen and (max-width: 1400px) {
+
+}
+
+/*------------------------------------------------*/
+/*Small tablets to big tablet: from 768 to 1023px*/
+/*------------------------------------------------*/
+
+@media only screen and (max-width: 1023px) {
+    .nav-heading {
+        display: none;
+    }
+}
+
+/*------------------------------------------------*/
+/*Small phones to small tablets: from 481 to 767px*/
+/*------------------------------------------------*/
+
+@media only screen and (max-width: 767px) {
+
+}

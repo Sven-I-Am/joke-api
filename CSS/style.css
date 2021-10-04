@@ -1,0 +1,185 @@
+/*-------*/
+/*OVERALL*/
+/*-------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 22px;
+    background-color: #b8e99444;
+    color: #0a3d62;
+
+}
+
+.comingSoon {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../IMG/comingSoon.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+/*--------*/
+/*REUSABLE*/
+/*--------*/
+
+H1,
+H2,
+H3 {
+    text-transform: uppercase;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #0a3d62;
+    content: " ";
+    width: 100px;
+    margin: 30px auto 0;
+}
+
+section {
+    text-align: center;
+    padding: 200px 5%;
+    max-height: 100vh;
+    min-height: 100vh;
+}
+
+/*------*/
+/*HEADER*/
+/*------*/
+
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../IMG/pexels-heorhii-heorhiichuk-892080.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+nav {
+    background-color: #0a3d62;
+    color: #ECFBE2;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sticky-top {
+    font-size: 22px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.logo {
+    width: 75px;
+}
+
+.nav-heading {
+    float: left;
+}
+
+.navbar-toggler {
+    color: #ECFBE2;
+    font-size: 200%;
+    margin-top: 25px;
+    border: none;
+}
+
+button {
+    color: transparent;
+}
+
+.nav-item {
+    text-align: center;
+}
+
+.nav-link {
+    color: #ECFBE2;
+    text-transform: uppercase;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    border-bottom: 2px solid #b8e994;
+    color: #b8e994;
+}
+
+/*-------*/
+/*LANDING*/
+/*-------*/
+
+.main-text{
+    position: absolute;
+    max-width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ECFBE2;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+.btn-light {
+    background-color: #b8e994;
+    border: 1px solid #b8e994;
+    color: #0a3d62;
+}
+
+.btn-outline-light {
+    border: 1px solid #b8e994;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #b8e994;
+    border: 1px solid #0a3d62;
+    color: #0a3d62;
+}
+
+/*----------*/
+/*RANDOMIZER*/
+/*----------*/
+
+#randomizer {
+
+    background-color: #ECFBE2;
+}
+
+#jokeOutput {
+    width: 80%;
+    margin: 50px auto;
+}
+
+/*------*/
+/*FINDER*/
+/*------*/
+
+#finder {
+    background-image: linear-gradient(rgba(184, 233, 148, 0.5), rgba(184,233,148,0.5)), url(../IMG/comingSoon.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+/*-----*/
+/*ABOUT*/
+/*-----*/
+
+#about {
+    background-image: linear-gradient(rgba(184, 233, 148, 0.5), rgba(184,233,148,0.5)), url(../IMG/pexels-fernando-arcos-211122.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
