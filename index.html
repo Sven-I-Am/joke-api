@@ -28,7 +28,13 @@
                 <div class="collapse navbar-collapse main-nav pe-0" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#top">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#randomizer">Randomizer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#finder">Finder</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about">About</a>
@@ -38,7 +44,9 @@
                         </li>
                         <li class="nav-item dropdown">
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="index.html">Home</a></li>
+                                <li><a class="dropdown-item" href="#top">Home</a></li>
+                                <li><a class="dropdown-item" href="#randomizer">Randomizer</a></li>
+                                <li><a class="dropdown-item" href="#finder">Finder</a></li>
                                 <li><a class="dropdown-item" href="#about">About</a></li>
                                 <li><a class="dropdown-item" href="#contact">Contact</a></li>
                             </ul>
@@ -60,17 +68,50 @@
             <div class="section_title">
                 <h2>Randomizer</h2>
             </div>
-            <div id="jokeOutput">
-                <p id="joke">one Liner</p>
-                <p id="setup">Two_part: setup</p>
-                <p id="delivery">Two_par: delivery</p>
+            <div class="jokeOutput">
+                <p id="jokeRandom">one Liner</p>
+                <p id="setupRandom">Two_part: setup</p>
+                <p id="deliveryRandom">Two_part: delivery</p>
             </div>
-            <a class="btn btn-light rounded-pill"id="random">Random joke</a>
+            <a class="btn btn-light rounded-pill" id="random">Random joke</a>
         </div>
     </section>
     <section id="finder">
         <div class="container">
-            <h2>Finder</h2>
+            <div class="section_title">
+                <h2>Finder</h2>
+            </div>
+            <div class="row searchParameters">
+                <div class="col categories">
+                    <ul>
+                        <li><input name='cat-select' type="radio" id="cat-Any" value="Any" checked><label for="cat-Any">Any</label></li>
+                        <li><input name='cat-select' type="radio" id="cat-Prog" value="Programming"><label for="cat-Prog">Programming</label></li>
+                        <li><input name='cat-select' type="radio" id="cat-Misc" value="Miscellaneous"><label for="cat-Misc">Misc</label></li>
+                        <li><input name='cat-select' type="radio" id="cat-Dark" value="Dark"><label for="cat-Dark">Dark</label></li>
+                        <li><input name='cat-select' type="radio" id="cat-Pun" value="Pun"><label for="cat-Pun">Pun</label></li>
+                        <li><input name='cat-select' type="radio" id="cat-Spook" value="Spooky"><label for="cat-Spook">Spooky</label></li>
+                        <li><input name='cat-select' type="radio" id="cat-Christ" value="Christmas"><label for="cat-Christ">Christmas</label></li>
+                    </ul>
+                </div>
+                <div class="col language">
+                    <ul>
+                        <li><input name='lang-select' type="radio" id="lang-en" value="" checked><label for="lang-en">English</label></li>
+                        <li><input name='lang-select' type="radio" id="lang-de" value="?lang=de"><label for="lang-de">German</label></li>
+                        <li><input name='lang-select' type="radio" id="lang-cs" value="?lang=cs"><label for="lang-cs">Czech</label></li>
+                        <li><input name='lang-select' type="radio" id="lang-es" value="?lang=es"><label for="lang-es">Spanish</label></li>
+                        <li><input name='lang-select' type="radio" id="lang-fr" value="?lang=fr"><label for="lang-fr">French</label></li>
+                        <li><input name='lang-select' type="radio" id="lang-pt" value="?lang=pt"><label for="lang-pt">Portuguese</label></li>
+                    </ul>
+                </div>
+            </div>
+                <a class="btn btn-light rounded-pill" id="find">Find joke</a>
+                <div class="jokeOutput">
+                    <p id="jokeFind">one Liner</p>
+                    <p id="setupFind">Two_part: setup</p>
+                    <p id="deliveryFind">Two_part: delivery</p>
+                </div>
+
+
         </div>
     </section>
     <section id="about">

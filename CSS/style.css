@@ -155,7 +155,7 @@ h1 {
     background-color: #ECFBE2;
 }
 
-#jokeOutput {
+.jokeOutput {
     width: 80%;
     margin: 50px auto;
 }
@@ -165,11 +165,16 @@ h1 {
 /*------*/
 
 #finder {
-    background-image: linear-gradient(rgba(184, 233, 148, 0.5), rgba(184,233,148,0.5)), url(../IMG/comingSoon.jpg);
+    background-image: linear-gradient(rgba(236, 251, 226,0.7), rgba(236,251,226,0.7)), url(../IMG/pexels-skitterphoto-63901.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
     background-attachment: fixed;
+}
+
+#finder ul {
+    list-style: none;
+    text-align: left;
 }
 
 /*-----*/
