@@ -53,18 +53,13 @@
             categorie = categorieArray.join(',');
         }
 
-
-
         let flagSelect = document.getElementsByName('blacklist-select');
         for (i=0; i<flagSelect.length;i++) {
             if (flagSelect[i].checked){
                 flagArray.push(flagSelect[i].value);
             }
         }
-
         flags = flagArray.join(',');
-
-
 
         let langSelect = document.getElementsByClassName('lang-select');
         console.log(langSelect);
@@ -86,6 +81,9 @@
             type = typeArray.join('');
         }
 
+        let text = document.getElementById('searchbox').value;
+        text = text.split(' ').join('%20');
+
             input = 'https://v2.jokeapi.dev/joke/' + categorie;
             if (language.length!==0) {
                 input += language;
@@ -96,13 +94,24 @@
                 if (type.length!==0){
                     input += '&type=' + type;
                 }
+                if (text.length!==0){
+                    input += '&contains=' + text;
+                }
             } else if (flags.length !== 0) {
                 input += '?blacklistFlags=' + flags;
                 if (type.length!==0){
                     input += '&type=' + type;
                 }
+                if (text.length!==0){
+                    input += '&contains=' + text;
+                }
             } else if (type.length!==0){
                 input += '?type=' + type;
+                if (text.length!==0){
+                    input += '&contains=' + text;
+                }
+            } else if (text.length!==0){
+                input += '?contains=' + text;
             }
 
         console.log('catArray: ' + categorieArray);
@@ -110,6 +119,7 @@
         console.log('lang: ' + language);
         console.log('flags: ' + flags);
         console.log('type: ' + type);
+        console.log('search: ' + text);
         console.log(input);
         getJOKE();
 
