@@ -50,6 +50,12 @@ section {
     min-height: 100vh;
 }
 
+p {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+
 /*------*/
 /*HEADER*/
 /*------*/
@@ -172,9 +178,17 @@ h1 {
     background-attachment: fixed;
 }
 
-#finder ul {
-    list-style: none;
+.searchParameters {
     text-align: left;
+}
+
+.searchParameters ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.label {
+    text-decoration: underline;
 }
 
 /*-----*/

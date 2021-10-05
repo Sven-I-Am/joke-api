@@ -30,26 +30,86 @@
         input = 'https://v2.jokeapi.dev/joke/Any';
         getJOKE();
     })
+
     document.getElementById('find').addEventListener('click', function (){
-        let categorie = '';
+       // input = 'https://v2.jokeapi.dev/joke/Any';
+        let categorieArray = [];
+        let categorie;
+        let flagArray = [];
+        let flags;
         let language = '';
+        let typeArray =[];
+        let type;
+
         let catSelect = document.getElementsByName('cat-select');
         for (i=0; i<catSelect.length;i++) {
             if (catSelect[i].checked){
-                categorie = catSelect[i].value;
+                categorieArray.push(catSelect[i].value);
             }
         }
-        let langSelect = document.getElementsByName('lang-select');
+        if (categorieArray.length===0){
+            categorie = 'Any';
+        } else {
+            categorie = categorieArray.join(',');
+        }
+
+
+
+        let flagSelect = document.getElementsByName('blacklist-select');
+        for (i=0; i<flagSelect.length;i++) {
+            if (flagSelect[i].checked){
+                flagArray.push(flagSelect[i].value);
+            }
+        }
+
+        flags = flagArray.join(',');
+
+
+
+        let langSelect = document.getElementsByClassName('lang-select');
+        console.log(langSelect);
         for (i=0; i<langSelect.length;i++) {
-            if (langSelect[i].checked){
+            if (langSelect[i].selected){
                 language = langSelect[i].value;
             }
         }
-        console.log(categorie);
-        console.log(language)
 
-        input = 'https://v2.jokeapi.dev/joke/' + categorie + language;
+        let typeSelect = document.getElementsByName('type-select');
+        for (i=0; i<typeSelect.length;i++){
+            if (typeSelect[i].checked){
+                typeArray.push(typeSelect[i].value);
+            }
+        }
+        if (typeArray.length !== 1) {
+            type = '';
+        } else {
+            type = typeArray.join('');
+        }
 
+            input = 'https://v2.jokeapi.dev/joke/' + categorie;
+            if (language.length!==0) {
+                input += language;
+                if (flags.length !== 0) {
+                    input += '&?blacklistFlags=' + flags;
+
+                }
+                if (type.length!==0){
+                    input += '&type=' + type;
+                }
+            } else if (flags.length !== 0) {
+                input += '?blacklistFlags=' + flags;
+                if (type.length!==0){
+                    input += '&type=' + type;
+                }
+            } else if (type.length!==0){
+                input += '?type=' + type;
+            }
+
+        console.log('catArray: ' + categorieArray);
+        console.log('cat: ' + categorie);
+        console.log('lang: ' + language);
+        console.log('flags: ' + flags);
+        console.log('type: ' + type);
         console.log(input);
         getJOKE();
 
